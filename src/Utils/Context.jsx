@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Context = () => {
+const Context = (props) => {
    
   const [products, setproducts] = useState(null)  
-  return <div>Context</div>
+  return <div>
+    {props.children}
+  </div>
   
 }
 
