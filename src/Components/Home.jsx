@@ -10,19 +10,19 @@ const Home = () => {
   console.log(products);
 
   return (products?
-    <>
+    <>  
     <Nav/>
 
 
-    <div className=' w-screen  h-screen  flex gap-7  overflow-x-hidden flex-wrap'>
+    <div className=' w-screen  h-screen  flex gap-2  overflow-x-hidden flex-wrap'>
 
         {products.map((item,index) =>(
-          <Link to="details" className='w-60 h-80 p-1 '>
+          <Link to={`/details/${item.id}`} className='w-60 h-80 m-3 p-2'>
           <div className='w-60 h-80 p-1  rounded-md border border-black flex flex-col items-center justify-center'>
           <img className='w-[75%] hover:scale-105 rounded-md h-[75%] object-contain' src={item.image} alt="" />
           <h3 className='font-semibold mt-2 cursor-pointer hover:text-blue-500'>{item.title}</h3>
-      </div>
-      </Link>
+          </div>
+          </Link>
         ))}
 
       
